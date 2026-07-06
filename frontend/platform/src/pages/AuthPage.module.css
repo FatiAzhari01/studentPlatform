@@ -1,0 +1,272 @@
+/* AuthPage.module.css — shared by Login + Register */
+*, *::before, *::after { box-sizing: border-box; }
+
+.page {
+  min-height: 100vh;
+  background: linear-height(160deg, #f8fafc 0%, #eff6ff 55%, #f0fdfa 100%);
+  background: #f0f4ff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Navbar ─────────────────────────────────────────────── */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navLogo {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.navLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+}
+
+.navLinkBtn {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  background: #2563eb;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background .15s;
+}
+.navLinkBtn:hover { background: #1d4ed8; }
+
+/* ── Center layout ──────────────────────────────────────── */
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* ── Card ────────────────────────────────────────────────── */
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 36px 40px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 24px rgba(0,0,0,.08);
+}
+
+/* ── Progress bar ────────────────────────────────────────── */
+.progressWrap { margin-bottom: 28px; }
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.stepLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #2563eb;
+}
+
+.stepName {
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.progressBar {
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #0d9488);
+  border-radius: 4px;
+  transition: width .4s ease;
+}
+
+/* ── Card head ───────────────────────────────────────────── */
+.cardHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.iconWrap {
+  width: 52px; height: 52px;
+  background: #eff6ff;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.cardTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.cardSub {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ── Form ────────────────────────────────────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 13px;
+  font-size: 14px;
+  color: #0f172a;
+  background: white;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+  font-family: inherit;
+}
+.input::placeholder { color: #94a3b8; }
+.input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.10);
+}
+
+.hint  { font-size: 12px; color: #94a3b8; }
+
+/* ── Messages ────────────────────────────────────────────── */
+.errorMsg {
+  font-size: 13px;
+  color: #ef4444;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 10px 14px;
+  line-height: 1.5;
+}
+
+.successMsg {
+  font-size: 13px;
+  color: #16a34a;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btnPrimary {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background .15s, transform .1s;
+  box-shadow: 0 2px 10px rgba(37,99,235,.25);
+  font-family: inherit;
+}
+.btnPrimary:hover:not(:disabled) { background: #1d4ed8; transform: translateY(-1px); }
+.btnPrimary:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+.btnOutline {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  background: white;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .15s;
+  font-family: inherit;
+}
+.btnOutline:hover { background: #f8fafc; border-color: #cbd5e1; }
+
+.stepBtns {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 10px;
+}
+
+/* ── Misc ────────────────────────────────────────────────── */
+.secBadges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 11.5px;
+  color: #94a3b8;
+}
+
+.passwordHint {
+  background: #eff6ff;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.terms {
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+  line-height: 1.6;
+}
+.terms a { color: #2563eb; text-decoration: none; }
+
+.switchLink {
+  text-align: center;
+  font-size: 13.5px;
+  color: #64748b;
+  margin-top: 20px;
+}
+.switchLink a { color: #2563eb; font-weight: 600; text-decoration: none; }
+
+@media (max-width: 520px) {
+  .card { padding: 28px 18px; }
+}

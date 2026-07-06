@@ -1,0 +1,43 @@
+.empty { font-size: 13px; color: #94a3b8; }
+.form  { display: flex; flex-direction: column; gap: 14px; }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.label { font-size: 13px; font-weight: 500; color: #334155; }
+.req   { color: #ef4444; }
+.hint  { font-size: 12px; color: #94a3b8; }
+
+.input {
+  width: 100%; padding: 9px 12px;
+  font-size: 14px; font-family: inherit;
+  color: #0f172a; background: white;
+  border: 1.5px solid #e2e8f0; border-radius: 10px; outline: none;
+  transition: border-color .15s, box-shadow .15s;
+  appearance: none;
+}
+.input::placeholder { color: #94a3b8; }
+.input:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,.08); }
+
+.textarea { resize: vertical; min-height: 80px; }
+
+select.input {
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2394a3b8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.formActions { display: flex; justify-content: flex-end; gap: 10px; padding-top: 4px; }
+
+.btnPrimary {
+  padding: 9px 20px; font-size: 13.5px; font-weight: 600;
+  color: white; background: #2563eb; border: none;
+  border-radius: 9px; cursor: pointer; font-family: inherit;
+}
+.btnPrimary:hover:not(:disabled) { background: #1d4ed8; }
+.btnPrimary:disabled { opacity: .6; cursor: not-allowed; }
+.btnOutline {
+  padding: 9px 18px; font-size: 13.5px; font-weight: 500;
+  color: #334155; background: white; border: 1.5px solid #e2e8f0;
+  border-radius: 9px; cursor: pointer; font-family: inherit;
+}
+.btnOutline:hover { background: #f8fafc; border-color: #cbd5e1; }

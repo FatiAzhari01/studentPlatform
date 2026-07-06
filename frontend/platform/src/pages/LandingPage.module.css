@@ -1,0 +1,361 @@
+.page { display: flex; flex-direction: column; min-height: 100vh; }
+
+/* ── HERO ──────────────────────────────────────────────────────────── */
+.hero {
+  padding: 140px 0 80px;
+  background: linear-gradient(160deg, #f8fafc 0%, #eff6ff 55%, #f0fdfa 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37,99,235,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -60px;
+  width: 380px; height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(13,148,136,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left */
+.heroLeft { display: flex; flex-direction: column; gap: 24px; }
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--blue-600);
+  background: white;
+  border: 1px solid var(--blue-100);
+  border-radius: 20px;
+  padding: 5px 12px;
+  width: fit-content;
+  box-shadow: var(--shadow-sm);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.12;
+  color: var(--navy-900);
+  letter-spacing: -.02em;
+}
+
+.heroAccent {
+  background: linear-gradient(135deg, #2563eb 0%, #0d9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroDesc {
+  font-size: 16px;
+  color: var(--slate-500);
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+.heroCta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 28px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  background: var(--blue-600);
+  border-radius: 11px;
+  border: none;
+  box-shadow: 0 4px 16px rgba(37,99,235,.30);
+  transition: all 0.2s;
+}
+.ctaPrimary:hover { background: var(--blue-700); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,99,235,.38); }
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 24px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--slate-700);
+  background: white;
+  border-radius: 11px;
+  border: 1.5px solid var(--slate-200);
+  transition: all 0.2s;
+}
+.ctaSecondary:hover { border-color: var(--slate-400); background: var(--slate-50); }
+
+/* Right */
+.heroRight { display: flex; justify-content: center; }
+
+.heroCard {
+  width: 100%;
+  max-width: 480px;
+  background: linear-gradient(145deg, #0d9488, #0f766e);
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(13,148,136,.30), 0 8px 24px rgba(0,0,0,.12);
+  animation: float 4.5s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroCard::before {
+  content: '';
+  position: absolute;
+  top: -40%; left: -20%;
+  width: 80%; height: 80%;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  pointer-events: none;
+}
+
+.heroSvg { width: 100%; height: auto; }
+
+/* ── STAKEHOLDERS ──────────────────────────────────────────────────── */
+.stakeholders {
+  padding: 96px 0;
+  background: white;
+}
+
+.sectionHead {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  color: var(--navy-900);
+  letter-spacing: -.015em;
+  margin-bottom: 12px;
+}
+
+.sectionSub {
+  font-size: 16px;
+  color: var(--slate-500);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.stakeholderGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.stakeholderCard {
+  background: white;
+  border: 1.5px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.stakeholderCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue-100);
+}
+
+.sIcon {
+  width: 44px; height: 44px;
+  background: var(--slate-100);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--slate-700);
+  margin-bottom: 16px;
+}
+
+.sTitle {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy-900);
+  margin-bottom: 10px;
+}
+
+.sDesc {
+  font-size: 14px;
+  color: var(--slate-500);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.sList { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+.sItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--slate-700);
+}
+
+/* ── HOW IT WORKS ──────────────────────────────────────────────────── */
+.howItWorks {
+  padding: 96px 0;
+  background: var(--slate-50);
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  position: relative;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.stepBubble {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--blue-600);
+  color: white;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(37,99,235,.30);
+  animation: pulse-ring 2.5s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.stepLine {
+  position: absolute;
+  top: 26px;
+  left: calc(50% + 36px);
+  width: calc(100% - 72px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue-200), var(--slate-200));
+  border-radius: 2px;
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy-900);
+  margin-bottom: 10px;
+}
+
+.stepDesc {
+  font-size: 14px;
+  color: var(--slate-500);
+  line-height: 1.65;
+  max-width: 280px;
+}
+
+/* ── CTA BANNER ────────────────────────────────────────────────────── */
+.ctaBanner { padding: 0 0 96px; }
+
+.ctaBannerInner {
+  position: relative;
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #0d9488 100%);
+  border-radius: var(--radius-xl);
+  padding: 72px 48px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ctaBannerBg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(255,255,255,.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(255,255,255,.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.ctaBannerTitle {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 800;
+  color: white;
+  letter-spacing: -.02em;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.ctaBannerSub {
+  font-size: 16px;
+  color: rgba(255,255,255,.8);
+  margin-bottom: 36px;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  position: relative;
+}
+
+.ctaBannerBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 32px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue-700);
+  background: white;
+  border-radius: 11px;
+  transition: all 0.2s;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,.15);
+}
+.ctaBannerBtn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,.20); }
+
+/* ── RESPONSIVE ────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .heroInner { grid-template-columns: 1fr; text-align: center; }
+  .heroBadge { margin: 0 auto; }
+  .heroDesc { max-width: 100%; margin: 0 auto; }
+  .heroCta { justify-content: center; }
+  .heroRight { display: none; }
+  .stakeholderGrid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .stepsGrid { grid-template-columns: 1fr; }
+  .stepLine { display: none; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 110px 0 60px; }
+  .ctaBannerInner { padding: 48px 24px; border-radius: var(--radius-lg); }
+}

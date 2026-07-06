@@ -1,0 +1,54 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  transition: border-color 0.15s;
+}
+.card:hover { border-color: #cbd5e1; }
+
+.left { display: flex; flex-direction: column; gap: 4px; }
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.level {
+  font-size: 11.5px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 2px 8px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.native       { background: #eff6ff; color: #1d4ed8; }
+.fluent       { background: #f0fdf4; color: #15803d; }
+.professional { background: #fefce8; color: #a16207; }
+.intermediate { background: #fff7ed; color: #c2410c; }
+.basic        { background: #f8fafc; color: #64748b; border: 1px solid #e2e8f0; }
+
+.actions { display: flex; gap: 2px; flex-shrink: 0; }
+
+.iconBtn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.iconBtn:hover { background: #e2e8f0; color: #334155; }
+.delBtn:hover  { background: #fef2f2; color: #ef4444; }

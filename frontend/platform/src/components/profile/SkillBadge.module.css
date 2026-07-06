@@ -1,0 +1,32 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 4px 11px;
+  transition: background 0.15s;
+}
+
+.technical { color: #1d4ed8; background: #eff6ff; border-color: #bfdbfe; }
+.soft      { color: #065f46; background: #ecfdf5; border-color: #a7f3d0; }
+.tool      { color: #92400e; background: #fffbeb; border-color: #fde68a; }
+
+.del {
+  background: none;
+  border: none;
+  color: inherit;
+  opacity: 0.5;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 1px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.15s;
+}
+.del:hover { opacity: 1; }

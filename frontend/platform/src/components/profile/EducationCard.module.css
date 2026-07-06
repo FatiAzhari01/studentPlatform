@@ -1,0 +1,54 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+.card:last-child { border-bottom: none; padding-bottom: 0; }
+.card:first-child { padding-top: 0; }
+
+.body { flex: 1; min-width: 0; }
+
+.degree {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 3px;
+}
+
+.institution {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 3px;
+}
+
+.meta { font-size: 12.5px; color: #94a3b8; }
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.years {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.actions { display: flex; gap: 2px; }
+
+.iconBtn {
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  border: none; background: transparent;
+  border-radius: 6px; color: #94a3b8; cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.iconBtn:hover { background: #f1f5f9; color: #334155; }
+.delBtn:hover  { background: #fef2f2; color: #ef4444; }
